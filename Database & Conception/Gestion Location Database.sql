@@ -123,29 +123,6 @@ INSERT IGNORE INTO `locations` (`id`, `date_depart`, `date_retour`, `prix`, `mat
 	(23, '2023-03-13 08:30:00', '2023-03-23 08:30:00', 3000, 2, 2, 1, 2, '2023-03-12 18:49:49');
 /*!40000 ALTER TABLE `locations` ENABLE KEYS */;
 
--- Dumping structure for table gestion_locations.reservations
-CREATE TABLE IF NOT EXISTS `reservations` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date_reservation` datetime NOT NULL,
-  `matricule` int(11) NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `agence_depart` int(11) NOT NULL,
-  `agence_retour` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `matricule` (`matricule`),
-  KEY `client_id` (`client_id`),
-  KEY `FK_reservations_agences` (`agence_depart`),
-  KEY `FK_reservations_agences_2` (`agence_retour`),
-  CONSTRAINT `FK_reservations_agences` FOREIGN KEY (`agence_depart`) REFERENCES `agences` (`id`),
-  CONSTRAINT `FK_reservations_agences_2` FOREIGN KEY (`agence_retour`) REFERENCES `agences` (`id`),
-  CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`matricule`) REFERENCES `voitures` (`matricule`),
-  CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Dumping data for table gestion_locations.reservations: ~0 rows (approximately)
-/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
-
 -- Dumping structure for table gestion_locations.voitures
 CREATE TABLE IF NOT EXISTS `voitures` (
   `matricule` int(11) NOT NULL,
