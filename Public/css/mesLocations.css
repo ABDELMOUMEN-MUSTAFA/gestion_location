@@ -1,0 +1,9 @@
+.car-image {
+	width: 270px;
+	object-fit: cover;
+}
+
+.card {
+	background-color: #28272e;
+	color: #fff;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "DM Sans";
+	font-weight: 700;
+	color: #fff;
+}
+
+nav {
+	background-color: #28272e;
+}
+
+
+.btn-check:checked+.btn{
+	background-color: #c9e77a;
+	color: #000;
+}
+
+.btn-check:hover+.btn{
+	background-color: #c9e77a;
+	color: #000;
+}
+
+.btn-check:checked+.btn-secondary:hover{
+	background-color: #c9e77a;
+	color: #000;
+}
+
+.btn-check:checked+.btn-light:hover {
+	background-color: #c9e77a;
+}
+
+.car-logo{
+	padding: 10px;
+	width: 90px;
+	background-color: #E1D7C6;
+	border-radius: 10%;
+}
+
+.car-image{
+	width: 300px;
+}
+
+.tooltip-inner {
+  background-color: #A0E4CB;
+  color: #000;
+}
+
+
+.bs-tooltip-top .arrow::before,
+.bs-tooltip-auto[x-placement^='top'] .arrow::before {
+  border-top-color: red !important;
+}
+
+.spinner {
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.error {
+	border: 1px solid #dc4c64;
+}
+
+.card {
+	background-color: #28272e;
+}
+
+select {
+	height: 35.27px;
+}
